@@ -1,11 +1,13 @@
-//
-//  main.m
-//  Cocos2dSimpleGame
-//
-//  Created by MAC on 7/24/13.
-//  Copyright __MyCompanyName__ 2013. All rights reserved.
-//
-
+/**************************************************************
+ *
+  * ___main.cpp___
+  * ___Cocos2dSimpleGame___
+  *
+  * Create by ___DuongHuuHieu___
+  *
+  * Copyright Vinova Pte. Ltd. All right reserved.
+  *************************************************************
+ */
 #import <UIKit/UIKit.h>
 
 int main(int argc, char *argv[]) {
