@@ -6,7 +6,7 @@
  * Create by ___DuongHuuHieu___
  *
  * Copyright Vinova Pte. Ltd. All right reserved.
- *************************************************************
+ **************************************************************
  */
 
 #ifndef __HELLOWORLD_SCENE_H__
@@ -17,11 +17,14 @@
 class HelloWorld : public cocos2d::CCLayerColor
 {
 public:
-    // Method 'init' in cocos2d-x returns bool, instead of 'id' in cocos2d-iphone (an object pointer)
-    virtual bool init();
+    // Method 'isInit' in cocos2d-x returns bool,
+    //instead of 'id' in cocos2d-iphone (an object pointer)
+    virtual bool isInit();
     HelloWorld();
     ~HelloWorld();
-    // there's no 'id' in cpp, so we recommend to return the class instance pointer
+    //there's no 'id' in cpp,
+    //so we recommend to return the class instance pointer
+    
     static cocos2d::CCScene* scene();
     
     // a selector callback
@@ -32,14 +35,15 @@ public:
     //add target
     void addTarget();
     
-    void spriteMoveFinished(CCNode* sender);
+    void spriteMoveFinished(CCNode* psender);
     void gameLogic(float dt);
     void update(float dt);
-    void ccTouchesEnded(cocos2d::CCSet* touches, cocos2d::CCEvent* event);
+    void ccTouchesEnded(cocos2d::CCSet* pTouches, cocos2d::CCEvent* pEvent);
     CREATE_FUNC(HelloWorld);
 protected:
-    cocos2d::CCArray* _targets;
-    cocos2d::CCArray* _projectiles;
+    cocos2d::CCArray* mTargets;
+    cocos2d::CCArray* mProjectiles;
+    int nProjectilesDestroyed;
 };
 
 #endif // __HELLOWORLD_SCENE_H__
